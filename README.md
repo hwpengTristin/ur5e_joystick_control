@@ -14,12 +14,12 @@ ros2 launch ur5e_joystick_control ur5e_joystick_control.launch.py
 # Learning ROS2: helpful commands
 参考网站： https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html
 1. open rqt_graph by opening rqt
-   $ rqt_graph
+$ rqt_graph
 2. (1) ros2 topic list
-   $ ros2 topic list
-   (2) ros2 topic TYPE
-   $ ros2 topic type /joint_states
-   (3) return the same list of topics, this time with the topic type appended in brackets
-   $ ros2 topic list -t
+$ ros2 topic list
+(2) ros2 topic TYPE
+$ ros2 topic type /joint_states
+(3) return the same list of topics, this time with the topic type appended in brackets
+$ ros2 topic list -t
    
    
