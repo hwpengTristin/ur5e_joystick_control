@@ -62,4 +62,10 @@ colcon build
 source install/setup.bash
 ros2 launch ur5e_joystick_control realsense_l515.launch.py
 ```
-   
+4. problem and solutions:
+(1) Import Error: /lib/libgdal.so.26: undefined symbol: TIFFReadRGBATileExt, version LIBTIFF_4.0
+#It seems Conda Environment's libtiff4.5 was the problem. Did the following for resolving:
+    conda uninstall libtiff
+    conda install libtiff=4.0.8
+    pip install Pillow==2.2.2
+
