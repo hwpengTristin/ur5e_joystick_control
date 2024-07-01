@@ -75,4 +75,7 @@ change $('share/' + package_name + '/launch', glob('launch/*.launch.py')), to th
     conda install libtiff=4.0.8
     pip install Pillow==2.2.2
 
+(2) OpenCV(4.2.0) /io/opencv/modules/highgui/src/window.cpp:634: error: (-2:Unspecified error) The function is not implemented #323 
+    pip uninstall opencv-python-headless -y 
+    pip install opencv-python --upgrade
 ```
