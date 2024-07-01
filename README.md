@@ -24,5 +24,42 @@ $ ros2 topic type /joint_states
 (3) return the same list of topics, this time with the topic type appended in brackets
 $ ros2 topic list -t
 ```
-   
+
+# camera rgbd launch and subscriber
+```bash
+1. write camera launch file  realsense_l515.launch.py :
+
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package='realsense2_camera',
+            executable='realsense2_camera_node',
+            name='realsense_camera',
+            output='screen',
+            parameters=[{
+                'enable_color': True,
+                'enable_depth': True,
+                'depth_module.profile': '640x480x30',
+                'rgb_camera.profile': '640x480x30',
+                'enable_infra1': False,
+                'enable_infra2': False,
+                'enable_gyro': False,
+                'enable_accel': False
+            }]
+        )
+    ])
+
+
+2. edit setup.py file
+change $('share/' + package_name + '/launch', glob('launch/*.launch.py')), to the following:
+$ ('share/' + package_name + '/launch', glob('launch/*.launch.py')),
+
+3. build the workspace
+colcon build
+source install/setup.bash
+ros2 launch ur5e_joystick_control realsense_l515.launch.py
+```
    
