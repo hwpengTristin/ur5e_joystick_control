@@ -27,6 +27,11 @@
 
 # camera rgbd launch and subscriber
 ```bash
+
+方法一，参见官网：https://github.com/IntelRealSense/realsense-ros?tab=readme-ov-file#usage
+
+方法二，如下：
+
 1. write camera launch file  realsense_l515.launch.py :
     
     from launch import LaunchDescription
