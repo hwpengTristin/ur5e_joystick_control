@@ -24,7 +24,10 @@
 (3) return the same list of topics, this time with the topic type appended in brackets
     $ ros2 topic list -t
 ```
-
+# Problem
+1. 下面的命令不能在conda 环境中输入，要在系统环境中输入
+   $ rosdep install -iyr --from-paths src
+   $ colcon build
 # camera rgbd launch and subscriber
 ```bash
 
