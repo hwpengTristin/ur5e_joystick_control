@@ -80,7 +80,7 @@ change $('share/' + package_name + '/launch', glob('launch/*.launch.py')), to th
 (1) Import Error: /lib/libgdal.so.26: undefined symbol: TIFFReadRGBATileExt, version LIBTIFF_4.0
 #It seems Conda Environment's libtiff4.5 was the problem. Did the following for resolving:
     conda uninstall libtiff
-    conda install libtiff=4.0.8
+    conda install libtiff=4.0.8http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/CameraInfo.html
     pip install Pillow==2.2.2
 
 (2) OpenCV(4.2.0) /io/opencv/modules/highgui/src/window.cpp:634: error: (-2:Unspecified error) The function is not implemented #323 
@@ -91,7 +91,7 @@ change $('share/' + package_name + '/launch', glob('launch/*.launch.py')), to th
 ```bash
 # nano 修改文件内容，使得RGB和depth数据同步、对齐
     cd /opt/ros/galactic/share/realsense2_camera/launch
-    nano rs_launch.py  #修改内容（'enable_sync'-->'default': 'true'; 'align_depth.enable'-->'default': 'false'）
-
-
+    nano rs_launch.py  #修改内容（'enable_sync'-->'default': 'true'; 'align_depth.enable'-->'default': 'true'）
+# 查看 camera message的内参等参数
+http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/CameraInfo.html
 ```
