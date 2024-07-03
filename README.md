@@ -87,3 +87,11 @@ change $('share/' + package_name + '/launch', glob('launch/*.launch.py')), to th
     pip uninstall opencv-python-headless -y 
     pip install opencv-python --upgrade
 ```
+# Hand-eye Calibration
+```bash
+# nano 修改文件内容，使得RGB和depth数据同步、对齐
+    cd /opt/ros/galactic/share/realsense2_camera/launch
+    nano rs_launch.py  #修改内容（'enable_sync'-->'default': 'true'; 'align_depth.enable'-->'default': 'false'）
+
+
+```
