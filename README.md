@@ -95,3 +95,21 @@ change $('share/' + package_name + '/launch', glob('launch/*.launch.py')), to th
 # 查看 camera message的内参等参数
 http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/CameraInfo.html
 ```
+
+# ros2 创建工作空间方法,假设工作空间名字ros2_remp38_ws
+```bash
+mkdir -p ~/ros2_remp38_ws/src
+cd ~/ros2_remp38_ws/src
+#放入python工程到src目录，如git
+git clone https://github.com/marcoesposito1988/easy_handeye2
+cd ..  # now we are inside ~/ros2_remp38_ws
+conda deactivate #不要有任何环境
+rosdep install -iyr --from-paths src
+# build
+colcon build
+source install/setup.bash
+# 每个命令行都要先输入下面命令行
+source /opt/ros/galactic/setup.bash
+# or
+source ~/ros.sh
+```
