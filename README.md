@@ -34,7 +34,7 @@
 '''bash
 cd /opt/ros/galactic/share/realsense2_camera/launch
 nano rs_launch.py 
-## rs_launch.py 文件内容修改如下
+### rs_launch.py 文件内容修改如下
 'enable_sync',                  'default': 'true'
 'align_depth.enable',           'default': 'true'
 '''
