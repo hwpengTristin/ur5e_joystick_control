@@ -25,9 +25,11 @@
     $ ros2 topic list -t
 ```
 # Problem
+```bash
 1. 下面的命令不能在conda 环境中输入，要在系统环境中输入
    $ rosdep install -iyr --from-paths src
    $ colcon build
+```
 # camera rgbd launch and subscriber
 ```bash
 
