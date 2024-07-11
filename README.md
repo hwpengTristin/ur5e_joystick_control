@@ -31,13 +31,13 @@
    $ colcon build
 ```
 # realsense camera 默认设置
-'''bash
+```bash
 cd /opt/ros/galactic/share/realsense2_camera/launch
 nano rs_launch.py 
 ### rs_launch.py 文件内容修改如下
 'enable_sync',                  'default': 'true'
 'align_depth.enable',           'default': 'true'
-'''
+```
 ### 启动realsense camera
 ```bash
 ####'REALSENSE_D455'
@@ -45,7 +45,7 @@ ros2 launch realsense2_camera rs_launch.py depth_module.depth_profile:=848x480x3
 ####'REALSENSE_L515'
 ros2 launch realsense2_camera rs_launch.py depth_module.depth_profile:=640x480x30 pointcloud.enable:=true rgb_camera.profile:=640x480x30
 
-'''
+```
 
 # camera rgbd launch and subscriber
 ```bash
