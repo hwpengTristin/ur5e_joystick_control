@@ -46,6 +46,8 @@ ros2 launch realsense2_camera rs_launch.py depth_module.depth_profile:=848x480x3
 ####'REALSENSE_L515'
 ros2 launch realsense2_camera rs_launch.py depth_module.depth_profile:=640x480x30 pointcloud.enable:=true rgb_camera.profile:=640x480x30
 
+ros2 launch realsense2_camera rs_launch.py depth_module.profile:=640x480x30 pointcloud.enable:=true rgb_camera.profile:=640x480x30 
+
 ```
 
 # camera rgbd launch and subscriber
