@@ -33,6 +33,7 @@
 # realsense camera 默认设置
 ```bash
 cd /opt/ros/galactic/share/realsense2_camera/launch
+sudo chmod 777 rs_launch.py
 nano rs_launch.py 
 ### rs_launch.py 文件内容修改如下
 'enable_sync',                  'default': 'true'
